@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <style>
+        .slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 10%;
+    height: auto;
+}
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="logotipocetis156.jpg" alt="Image 1">
+            <img src="mata.jpg" alt="Image 2">
+            <img src="vianney.jpg" alt="Image 3">
+            <img src="Sarita.jpg" alt="Image 4">
+            <img src="ale.jpeg" alt="Image 5">
+            <img src="fondo.jpg" alt="Image 6">
+            <!-- Agrega más imágenes según sea necesario -->
+        </div>
+    </div>
+    <script>
+        const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slider img');
+
+let currentIndex = 0;
+const slideWidth = slides[0].clientWidth;
+
+function nextSlide() {
+    if (currentIndex >= slides.length - 1) {
+        currentIndex = 0;
+    } else {
+        currentIndex++;
+    }
+    updateSlide();
+}
+
+function updateSlide() {
+    slider.style.transform = `translateX(${-currentIndex * slideWidth}px)`;
+}
+
+setInterval(nextSlide,)
+    </script>
+
+</body>
+</html>

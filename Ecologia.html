@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecologia</title>
+</head>
+<style>
+    body{
+        background-color: lightblue;
+    }
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+    width: 35%;
+    height: auto;
+}
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slider img');
+    let index = 0;
+    const slideWidth = slides[0].clientWidth;
+    const totalSlides = slides.length;
+
+    function nextSlide() {
+        index = (index + 1) % totalSlides;
+        updateSlide();
+    }
+
+    function updateSlide() {
+        slider.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
+
+    setInterval(nextSlide, 1000);
+});
+</script>
+<body>
+    <div class="slider-container">
+        <div class="slider">
+            <img src="Ecologia 1.jpg" alt="imagen1">
+            <img src="Ecologia 2.jpg" alt="imagen2">
+            <img src="Ecologia 3.jpg" alt="imagen3">
+            <img src="Ecologia 4.jpg" alt="imagen4">
+            <img src="Ecologia 5.jpg" alt="imagen5">
+            <img src="Ecologia 6.jpg" alt="imagen6">
+        </div>
+    </div>
+<body>
+    <ul>
+        <li><a href="Proyrcto_Transversal.html">inicio</a></li>
+    </ul>
+    <h2>Ecologia</h2>
+    <h2>Implementacion de energias renovables</h2>
+    <p>Consiste en entregar un apoyo económico para la adquisición e instalación de paneles solares en las unidades de producción para
+        garantizar su abasto de energía y aprovechar la posibilidad de utilizar tecnologías limpias que permitan la reducción en el aporte
+        de gases de efecto invernadero y además, disminuir el alto.</p>
+        <p>¿Dónde se puede implementar la energía renovable?</p>
+        <p>Se puede utilizar para satisfacer numerosas necesidades como calentar aire o agua para consumo doméstico o industrial,
+            por ejemplo, para la calefacción o sistemas de vapor. En el sector agrícola se puede aplicar en invernaderos solares para mejorar
+            las cosechas.</p>
+            <p>¿Qué energía renovable Implementarias?</p>
+            <p> Puedes contribuir a la ecología y mejorar tu economía del hogar si conoces cuáles tecnologías de energía
+                renovable podrías implementar en tu casa</p>
+                <p>¿Con cuáles de ellos podrías ahorrar en tu casa?</p>
+                <p>● Paneles solares</p>
+                <p>● Calentador solar de agua</p>
+                <p>● Sistemas de captación de agua pluvial</p>
+                <p>Se puede utilizar para satisfacer numerosas necesidades como calentar aire o agua para consumo doméstico o industrial,
+                    por ejemplo, para la calefacción o sistemas de vapor. En el sector agrícola se puede aplicar en invernaderos solares
+                    para mejorar las cosechas.</p>
+</body>
+</html>
